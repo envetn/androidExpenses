@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:background="@color/colorPrimary">
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/AddExpenseHeader"
+                android:textSize="@dimen/headerFontSize"
+                android:textColor="@color/White"
+                android:gravity="center_horizontal"
+                android:id="@+id/tv_headerAddExpense"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+
+
+        <!-- float to the left
+
+
+        <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:id="@+id/rb_isExpense"
+                android:layout_gravity="left"
+                android:layout_weight="0.07"
+                android:checked="false"/>-->
+
+        <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Expense"
+                android:id="@+id/cb_isExpense"
+                android:checked="true"/>
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_marginTop="0sp"
+                android:layout_height="30sp"
+                android:layout_weight="0.07">
+            <TextView
+                    android:layout_width="100sp"
+                    android:layout_height="match_parent"
+                    android:text="@string/Cost"
+                    android:textSize="@dimen/defaultFontSize"
+                    android:textAlignment="center"
+                    android:gravity="center_vertical"
+                    android:id="@+id/tv_costText"/>
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:textSize="@dimen/defaultFontSize"
+                    android:id="@+id/et_costValue"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="20sp"
+                android:layout_weight="0.07">
+
+            <TextView
+                    android:layout_width="100sp"
+                    android:layout_height="match_parent"
+                    android:text="@string/Comment"
+                    android:textSize="@dimen/defaultFontSize"
+                    android:textAlignment="center"
+                    android:gravity="center_vertical"
+                    android:id="@+id/tv_costComment"/>
+
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textNoSuggestions"
+                    android:ems="10"
+                    android:textSize="@dimen/defaultFontSize"
+                    android:id="@+id/et_costComment"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_marginTop="30sp"
+                android:layout_marginRight="30sp"
+                android:layout_height="20sp"
+                android:layout_weight="0.14">
+
+            <TextView
+                    android:layout_width="100sp"
+                    android:layout_height="match_parent"
+                    android:text="@string/Type"
+                    android:textSize="@dimen/defaultFontSize"
+                    android:textAlignment="center"
+                    android:gravity="center_vertical"
+                    android:id="@+id/tv_costType"/>
+
+            <Spinner
+                    android:layout_width="100sp"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/sp_expenseTypes"
+                    android:textSize="@dimen/defaultFontSize"
+                    android:layout_weight="1"/>
+        </LinearLayout>
+
+        <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="@color/DARK_BLUE"/>
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="30sp"
+                android:layout_marginTop="60sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:text="Save"
+                android:textSize="30sp"
+                android:id="@+id/btn_saveExpenses"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/DARK_BLUE"
+                android:layout_weight="0.07"/>
+
+    </LinearLayout>
+</LinearLayout>

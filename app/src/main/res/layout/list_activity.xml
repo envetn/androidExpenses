@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:weightSum="1">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:background="@color/colorPrimary">
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Added elephants"
+                android:textSize="@dimen/headerFontSize"
+                android:textColor="@color/White"
+                android:gravity="center_horizontal"
+                android:id="@+id/tv_headerAddExpense"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.98"
+            android:weightSum="1">
+
+        <!-- fix height -->
+
+        <include layout="@layout/progress_loading"/>
+
+        <ListView
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:id="@+id/lv_listOfExpenses"
+                android:layout_weight="0.8"/>
+
+
+        <!-- Dropdowns -->
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary">
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:gravity="left">
+
+                <TextView
+                        android:layout_width="50sp"
+                        android:layout_height="match_parent"
+                        android:text="@string/SortType"
+                        android:textSize="@dimen/defaultFontSize"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/White"
+                        android:id="@+id/tv_costType"/>
+
+                <Spinner
+                        android:layout_width="120sp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/sp_expenseSortType"
+                        android:textSize="@dimen/defaultFontSize"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:gravity="right"
+                    android:background="@color/DARK_BLUE">
+
+                <TextView
+                        android:layout_width="50sp"
+                        android:layout_height="match_parent"
+                        android:text="@string/showType"
+                        android:textSize="@dimen/defaultFontSize"
+                        android:textAlignment="center"
+                        android:gravity="center_vertical"
+                        android:id="@+id/tv_Type"/>
+
+                <Spinner
+                        android:layout_width="120sp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/sp_expensesShowType"
+                        android:textSize="@dimen/defaultFontSize"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+
+                android:orientation="horizontal"
+                android:background="@color/DARK_BLUE"
+                android:layout_weight="0.2">
+
+
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Remove"
+                    android:id="@+id/bn_remove"
+                    android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
